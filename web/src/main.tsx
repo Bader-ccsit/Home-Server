@@ -7,19 +7,28 @@ import Activate from './pages/Activate'
 import Home from './pages/Home'
 import Reset from './pages/Reset'
 import './styles.css'
+import { I18nProvider } from './contexts/I18nContext'
+import { ThemeProvider } from './contexts/ThemeContext'
+import Layout from './components/Layout'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/activate" element={<Activate />} />
-  <Route path="/reset" element={<Reset />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/signin" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <I18nProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/activate" element={<Activate />} />
+              <Route path="/reset" element={<Reset />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Navigate to="/signin" replace />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </ThemeProvider>
+    </I18nProvider>
   )
 }
 

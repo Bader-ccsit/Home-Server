@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
+import { useI18n } from '../contexts/I18nContext'
+import { useTheme } from '../contexts/ThemeContext'
+import FancyInput from '../components/FancyInput'
+import AnimatedCard from '../components/AnimatedCard'
+import AnimatedButton from '../components/AnimatedButton'
 
 export default function SignIn() {
+  const { t } = useI18n()
+  const { theme } = useTheme()
   const [identifier, setIdentifier] = useState('')
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
@@ -21,27 +29,35 @@ export default function SignIn() {
       if (res.data.token) localStorage.setItem('token', res.data.token)
       navigate('/home')
     } catch (err: any) {
-      setError(err?.response?.data?.message || 'Sign in failed')
+      setError(err?.response?.data?.message || (t('signIn') + ' failed'))
     }
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-900 to-indigo-900 text-white">
-      <form onSubmit={submit} className="bg-white/5 backdrop-blur-md p-8 rounded-xl w-full max-w-md">
-        <h1 className="text-3xl font-bold mb-4">Sign in</h1>
-  <label className="block mb-2">Email or Username</label>
-  <input className="w-full p-2 rounded mb-4 text-black" value={identifier} onChange={e => setIdentifier(e.target.value)} />
-        <label className="block mb-2">Password</label>
-        <input type="password" className="w-full p-2 rounded mb-4 text-black" value={password} onChange={e => setPassword(e.target.value)} />
-        {error && <div className="text-rose-400 mb-2">{error}</div>}
-        <button className="w-full bg-indigo-500 py-2 rounded font-semibold">Sign in</button>
-        <div className="mt-4 text-sm">
-          Don't have an account? <Link to="/signup" className="text-sky-300 underline">Sign up</Link>
-          <div className="mt-2">
-            <Link to="/reset" className="text-sky-300 underline">Forgot password?</Link>
+    <div className="flex items-center justify-center py-12">
+      <AnimatedCard>
+        <form onSubmit={submit}>
+          <h1 className="text-3xl font-bold mb-2">{t('welcomeBack')}</h1>
+          <p className="text-sm text-white/75 mb-6">{t('signIn')}</p>
+
+          <FancyInput label={t('emailOrUsername')} value={identifier} onChange={e => setIdentifier(e.target.value)} placeholder={t('emailOrUsername')} />
+
+          <FancyInput label={t('password')} value={password} onChange={e => setPassword(e.target.value)} type={showPassword ? 'text' : 'password'} placeholder={t('password')} />
+          <div className="flex justify-end mb-4">
+            <button type="button" onClick={() => setShowPassword(s => !s)} className="text-xs opacity-80">{showPassword ? 'Hide' : 'Show'}</button>
           </div>
-        </div>
-      </form>
+
+          {error && <div className="text-rose-400 mb-2">{error}</div>}
+          <AnimatedButton type="submit" className="w-full">{t('signIn')}</AnimatedButton>
+
+          <div className="mt-4 text-sm text-white/90">
+            <div>{t('signUp')}? <Link to="/signup" className="text-sky-300 underline">{t('createAccount')}</Link></div>
+            <div className="mt-2">
+              <Link to="/reset" className="text-sky-300 underline">{t('forgotPassword')}</Link>
+            </div>
+          </div>
+        </form>
+      </AnimatedCard>
     </div>
   )
 }
