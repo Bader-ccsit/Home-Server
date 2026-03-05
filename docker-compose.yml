@@ -1,0 +1,7 @@
+version: '3.8'
+# docker-compose configuration (disabled)
+# This file was used for optional local Docker setup (Postgres + MinIO)
+# The current development workflow does not require Docker. If you need
+# the original compose file again, an archived copy is available in
+# git history or we can recreate it on request.
+
