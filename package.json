@@ -1,0 +1,24 @@
+{
+  "name": "homeserver",
+  "version": "1.0.0",
+  "description": "This repository is a home server web app. It contains three top-level folders:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bader-ccsit/Home-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bader-ccsit/Home-Server/issues"
+  },
+  "homepage": "https://github.com/Bader-ccsit/Home-Server#readme",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "form-data": "^4.0.5"
+  }
+}

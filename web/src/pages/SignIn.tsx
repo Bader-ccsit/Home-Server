@@ -27,6 +27,11 @@ export default function SignIn() {
       }
       // store token if provided
       if (res.data.token) localStorage.setItem('token', res.data.token)
+      // store user id and username if returned
+      if (res.data.user) {
+        localStorage.setItem('userId', res.data.user.id)
+        localStorage.setItem('username', res.data.user.username)
+      }
       navigate('/home')
     } catch (err: any) {
       setError(err?.response?.data?.message || (t('signIn') + ' failed'))

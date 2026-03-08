@@ -2,6 +2,7 @@ import { Injectable, HttpException, HttpStatus, Logger } from '@nestjs/common'
 import { Repository } from 'typeorm'
 import { InjectRepository } from '@nestjs/typeorm'
 import { User } from '../../entities/user.entity'
+import { ensureUserDir } from '../../services/minioService'
 import { Otp } from '../../entities/otp.entity'
 import * as bcrypt from 'bcrypt'
 import * as jwt from 'jsonwebtoken'
@@ -26,6 +27,12 @@ export class AuthService {
     const passwordHash = await bcrypt.hash(password, 10)
     const user = this.usersRepo.create({ username, email, passwordHash })
     await this.usersRepo.save(user)
+    // create user's storage directory (local services/minio/<username>) so they have a drive immediately
+    try {
+      await ensureUserDir(username)
+    } catch (err) {
+      this.logger.warn('Failed to create user storage directory', (err as any).message)
+    }
     try {
       await this.sendOtp(user)
     } catch (err) {
@@ -138,8 +145,13 @@ export class AuthService {
     const ok = await bcrypt.compare(password, user.passwordHash)
     if (!ok) throw new HttpException('Invalid credentials', HttpStatus.UNAUTHORIZED)
     if (!user.activated) return { needsActivation: true, email: user.email }
-    const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET || 'secret', { expiresIn: '7d' })
-    return { token }
+    const token = jwt.sign(
+      { sub: user.id },
+      process.env.JWT_SECRET || 'secret',
+      { expiresIn: process.env.JWT_EXPIRES_IN || '365d' },
+    )
+    // return token and basic user info so clients can store username/id
+    return { token, user: { id: user.id, username: user.username } }
   }
 }
 
