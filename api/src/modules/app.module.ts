@@ -4,6 +4,7 @@ import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { AuthModule } from './auth/auth.module'
 import { StorageModule } from './storage/storage.module'
+import { BaderTubeModule } from './badertube/badertube.module'
 import { User } from '../entities/user.entity'
 import { Otp } from '../entities/otp.entity'
 import { StorageUsage } from '../entities/storage.entity'
@@ -22,6 +23,7 @@ import { StorageUsage } from '../entities/storage.entity'
     }),
   AuthModule,
   StorageModule,
+  BaderTubeModule,
   ],
 })
 export class AppModule {}

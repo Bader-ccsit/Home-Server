@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp'
 import Activate from './pages/Activate'
 import Home from './pages/Home'
 import Drive from './pages/Drive'
+import BaderTube from './pages/BaderTube'
 import Reset from './pages/Reset'
 import './styles.css'
 import { I18nProvider } from './contexts/I18nContext'
@@ -37,6 +38,7 @@ function App() {
               <Route path="/reset" element={<Reset />} />
               <Route path="/home" element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="/drive" element={<RequireAuth><Drive /></RequireAuth>} />
+              <Route path="/badertube" element={<RequireAuth><BaderTube /></RequireAuth>} />
               <Route path="/" element={<Navigate to={hasToken() ? '/home' : '/signin'} replace />} />
             </Routes>
           </Layout>

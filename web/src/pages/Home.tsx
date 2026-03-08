@@ -12,12 +12,19 @@ export default function Home() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatedCard className="p-6">
             <div className="flex flex-col">
-              <div className="text-lg font-semibold mb-2">Cloud Drive</div>
-              <div className="text-sm opacity-80 mb-4">Personal cloud storage (files & folders)</div>
-              <AnimatedButton onClick={() => window.location.href = '/drive'}>Open Drive</AnimatedButton>
+              <div className="text-lg font-semibold mb-2">{t('cloudDrive')}</div>
+              <div className="text-sm opacity-80 mb-4">{t('cloudDriveDesc')}</div>
+              <AnimatedButton onClick={() => window.location.href = '/drive'}>{t('openDrive')}</AnimatedButton>
             </div>
           </AnimatedCard>
-          <AnimatedCard className="p-6">Other Service</AnimatedCard>
+
+          <AnimatedCard className="p-6">
+            <div className="flex flex-col">
+              <div className="text-lg font-semibold mb-2">{t('baderTube')}</div>
+              <div className="text-sm opacity-80 mb-4">{t('baderTubeDesc')}</div>
+              <AnimatedButton onClick={() => window.location.href = '/badertube'}>{t('openBaderTube')}</AnimatedButton>
+            </div>
+          </AnimatedCard>
         </section>
       </main>
     </div>
