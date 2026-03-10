@@ -7,6 +7,7 @@ import { StorageModule } from './storage/storage.module'
 import { BaderTubeModule } from './badertube/badertube.module'
 import { AflamiModule } from './aflami/aflami.module'
 import { SecretsModule } from './secrets/secrets.module'
+import { HmlnyModule } from './hmlny/hmlny.module'
 import { User } from '../entities/user.entity'
 import { Otp } from '../entities/otp.entity'
 import { StorageUsage } from '../entities/storage.entity'
@@ -31,6 +32,7 @@ import { SecretsAccessOtp } from '../entities/secrets-access-otp.entity'
   BaderTubeModule,
   AflamiModule,
   SecretsModule,
+  HmlnyModule,
   ],
 })
 export class AppModule {}

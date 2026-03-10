@@ -11,6 +11,7 @@ import Aflami from './pages/Aflami'
 import AflamiManage from './pages/AflamiManage'
 import AflamiView from './pages/AflamiView'
 import AflamiManageMovie from './pages/AflamiManageMovie'
+import Hmlny from './pages/Hmlny'
 import SecretsVerify from './pages/SecretsVerify'
 import Secrets from './pages/Secrets'
 import Reset from './pages/Reset'
@@ -49,6 +50,7 @@ function App() {
               <Route path="/aflami/:id" element={<RequireAuth><AflamiView /></RequireAuth>} />
               <Route path="/aflami/manage" element={<RequireAuth><AflamiManage /></RequireAuth>} />
               <Route path="/aflami/manage/:id" element={<RequireAuth><AflamiManageMovie /></RequireAuth>} />
+              <Route path="/7mlny" element={<RequireAuth><Hmlny /></RequireAuth>} />
               <Route path="/secrets/verify" element={<RequireAuth><SecretsVerify /></RequireAuth>} />
               <Route path="/secrets" element={<RequireAuth><Secrets /></RequireAuth>} />
               <Route path="/" element={<Navigate to={hasToken() ? '/home' : '/signin'} replace />} />
