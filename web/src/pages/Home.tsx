@@ -33,6 +33,14 @@ export default function Home() {
               <AnimatedButton onClick={() => window.location.href = '/aflami'}>{t('openAflami')}</AnimatedButton>
             </div>
           </AnimatedCard>
+
+          <AnimatedCard className="p-6">
+            <div className="flex flex-col">
+              <div className="text-lg font-semibold mb-2">{t('secretsServiceName')}</div>
+              <div className="text-sm opacity-80 mb-4">{t('secretsServiceDesc')}</div>
+              <AnimatedButton onClick={() => window.location.href = '/secrets/verify'}>{t('openSecrets')}</AnimatedButton>
+            </div>
+          </AnimatedCard>
         </section>
       </main>
     </div>

@@ -15,7 +15,7 @@ async function bootstrap() {
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     credentials: true,
     // include custom headers used by the frontend (x-user-id for dev-mode user identification)
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'X-User-Id', 'x-user-id'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'X-User-Id', 'x-user-id', 'X-Secrets-Token', 'x-secrets-token'],
   })
   const port = process.env.API_PORT || 4000
   await app.listen(port)

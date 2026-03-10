@@ -64,3 +64,14 @@ body {
 /* RTL tweaks */
 [dir="rtl"] .mr-2 { margin-right: 0; margin-left: .5rem }
 
+/* Secrets selects: keep dropdown and option text readable on dark theme */
+.secrets-select {
+  color: #eef2ff;
+  background-color: rgba(15, 23, 42, 0.45);
+}
+
+.secrets-select option {
+  color: #e5e7eb;
+  background-color: #0f172a;
+}
+
