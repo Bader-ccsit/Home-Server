@@ -21,3 +21,9 @@ coverage/
 /.env.test.local
 /.env.production.local
 /api/.cache/
+
+# Local Aflami media storage (user uploads, thumbnails, and metadata)
+/api/services/
+/api/services/aflami/
+/api/services/aflami/movies/
+/api/services/aflami/thumbnails/

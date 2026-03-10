@@ -25,6 +25,14 @@ export default function Home() {
               <AnimatedButton onClick={() => window.location.href = '/badertube'}>{t('openBaderTube')}</AnimatedButton>
             </div>
           </AnimatedCard>
+
+          <AnimatedCard className="p-6">
+            <div className="flex flex-col">
+              <div className="text-lg font-semibold mb-2">{t('aflami')}</div>
+              <div className="text-sm opacity-80 mb-4">{t('aflamiDesc')}</div>
+              <AnimatedButton onClick={() => window.location.href = '/aflami'}>{t('openAflami')}</AnimatedButton>
+            </div>
+          </AnimatedCard>
         </section>
       </main>
     </div>

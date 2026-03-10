@@ -7,6 +7,10 @@ import Activate from './pages/Activate'
 import Home from './pages/Home'
 import Drive from './pages/Drive'
 import BaderTube from './pages/BaderTube'
+import Aflami from './pages/Aflami'
+import AflamiManage from './pages/AflamiManage'
+import AflamiView from './pages/AflamiView'
+import AflamiManageMovie from './pages/AflamiManageMovie'
 import Reset from './pages/Reset'
 import './styles.css'
 import { I18nProvider } from './contexts/I18nContext'
@@ -39,6 +43,10 @@ function App() {
               <Route path="/home" element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="/drive" element={<RequireAuth><Drive /></RequireAuth>} />
               <Route path="/badertube" element={<RequireAuth><BaderTube /></RequireAuth>} />
+              <Route path="/aflami" element={<RequireAuth><Aflami /></RequireAuth>} />
+              <Route path="/aflami/:id" element={<RequireAuth><AflamiView /></RequireAuth>} />
+              <Route path="/aflami/manage" element={<RequireAuth><AflamiManage /></RequireAuth>} />
+              <Route path="/aflami/manage/:id" element={<RequireAuth><AflamiManageMovie /></RequireAuth>} />
               <Route path="/" element={<Navigate to={hasToken() ? '/home' : '/signin'} replace />} />
             </Routes>
           </Layout>
