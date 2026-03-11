@@ -13,6 +13,9 @@ type CartItem = {
 export default function ShoppingCart() {
   const { t } = useI18n()
   const apiBase = (import.meta as any).env?.VITE_API_BASE || 'http://localhost:4000'
+  const driveFileUrl =
+    (import.meta as any).env?.VITE_SHOPPING_DRIVE_URL ||
+    'https://drive.google.com/file/d/1tv20G3DhRmwePzu28-9m-Hn_NwiB4ptg/view?usp=sharing'
   const [items, setItems] = useState<CartItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -93,6 +96,104 @@ export default function ShoppingCart() {
     }
   }
 
+  function buildShareText() {
+    const lines = items.map((item, idx) => `${idx + 1}. ${item.text}`)
+    return `${t('shoppingTitle')}\n\n${lines.join('\n\n')}`
+  }
+
+  function exportStyledPdf() {
+    const now = new Date()
+    const dateLabel = now.toLocaleString()
+    const rows = items
+      .map(
+        (item, idx) =>
+          `<div class="item"><span class="num">${idx + 1}.</span><span class="txt">${item.text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')}</span></div>`,
+      )
+      .join('')
+
+    const html = `<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>${t('shoppingPdfTitle')}</title>
+    <style>
+      @page { size: A4; margin: 18mm; }
+      body { font-family: "Segoe UI", Tahoma, sans-serif; color: #1a2233; }
+      .header {
+        border-bottom: 3px solid #2f7ec8;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .title { font-size: 32px; font-weight: 800; color: #153f66; margin: 0; }
+      .subtitle { font-size: 15px; color: #476282; margin-top: 6px; }
+      .list { margin-top: 18px; }
+      .item {
+        font-size: 23px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+        padding: 10px 12px;
+        background: #f4f8fc;
+        border-radius: 10px;
+      }
+      .num { font-weight: 800; color: #2f7ec8; margin-inline-end: 10px; }
+      .footer {
+        margin-top: 28px;
+        border-top: 2px solid #d2dce8;
+        padding-top: 10px;
+        font-size: 13px;
+        color: #5d6f86;
+        display: flex;
+        justify-content: space-between;
+      }
+      .watermark {
+        margin-top: 8px;
+        font-size: 11px;
+        color: #8ea1b7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">${t('shoppingPdfTitle')}</h1>
+      <div class="subtitle">${t('shoppingPdfSubtitle')}</div>
+    </div>
+    <div class="list">${rows || `<div class="item">${t('shoppingEmpty')}</div>`}</div>
+    <div class="footer">
+      <span>${t('shoppingPdfGeneratedOn')}: ${dateLabel}</span>
+      <span>${t('shoppingTitle')}</span>
+    </div>
+    <div class="watermark">${t('shoppingPdfFooterNote')}</div>
+  </body>
+</html>`
+
+    const printWindow = window.open('', '_blank', 'width=1000,height=900')
+    if (!printWindow) return
+    printWindow.document.open()
+    printWindow.document.write(html)
+    printWindow.document.close()
+    printWindow.focus()
+    setTimeout(() => {
+      printWindow.print()
+    }, 250)
+  }
+
+  async function shareList() {
+    const text = buildShareText()
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: t('shoppingTitle'), text })
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text)
+        alert(t('shoppingShareCopied'))
+      }
+    } catch {
+      // User cancelled share dialog or browser blocked sharing.
+    }
+  }
+
   useEffect(() => {
     loadItems()
   }, [])
@@ -100,7 +201,39 @@ export default function ShoppingCart() {
   return (
     <div className="max-w-4xl mx-auto w-full px-4 sm:px-6 py-6 space-y-4">
       <AnimatedCard className="!max-w-none !mx-0 p-5 sm:p-6">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-1">{t('shoppingTitle')}</h1>
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-1">
+          <h1 className="text-2xl sm:text-3xl font-bold">{t('shoppingTitle')}</h1>
+          <div className="flex items-center gap-2">
+            <a
+              href={driveFileUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-300/35 bg-sky-500/15 hover:bg-sky-500/25"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 3h7v7"/><path d="M10 14L21 3"/><path d="M21 14v7h-7"/><path d="M3 10V3h7"/><path d="M3 21l7-7"/></svg>
+              <span>{t('shoppingDriveButton')}</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={shareList}
+              className="h-10 w-10 rounded-full border border-emerald-300/35 bg-emerald-500/15 hover:bg-emerald-500/25 inline-flex items-center justify-center"
+              title={t('shoppingShareButton')}
+              aria-label={t('shoppingShareButton')}
+            >
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4"/><path d="M15.4 6.5l-6.8 4"/></svg>
+            </button>
+
+            <button
+              type="button"
+              onClick={exportStyledPdf}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-300/35 bg-amber-500/15 hover:bg-amber-500/25"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+              <span>{t('shoppingExportPdf')}</span>
+            </button>
+          </div>
+        </div>
         <p className="text-sm opacity-75 mb-4">{t('shoppingSubtitle')}</p>
 
         <div className="rounded-xl border border-white/10 bg-white/5 p-4 mb-4">

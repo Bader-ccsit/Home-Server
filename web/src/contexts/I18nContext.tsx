@@ -239,6 +239,14 @@ const translations: Record<string, Record<string, string>> = {
     shoppingDeleteConfirm: 'Are you sure you want to remove this grocery item?',
     shoppingConfirmYes: 'Yes',
     shoppingConfirmNo: 'No',
+    shoppingDriveButton: 'Drive',
+    shoppingShareButton: 'Share list',
+    shoppingShareCopied: 'List copied to clipboard.',
+    shoppingExportPdf: 'Export PDF',
+    shoppingPdfTitle: 'Shopping Cart List',
+    shoppingPdfSubtitle: 'Organized grocery checklist ready for sharing or printing.',
+    shoppingPdfGeneratedOn: 'Generated on',
+    shoppingPdfFooterNote: 'Prepared by HomeServer Shopping Cart',
   },
   ar: {
     signIn: 'تسجيل الدخول',
@@ -478,6 +486,14 @@ const translations: Record<string, Record<string, string>> = {
     shoppingDeleteConfirm: 'هل أنت متأكد من إزالة عنصر البقالة هذا؟',
     shoppingConfirmYes: 'نعم',
     shoppingConfirmNo: 'لا',
+    shoppingDriveButton: 'Drive',
+    shoppingShareButton: 'مشاركة القائمة',
+    shoppingShareCopied: 'تم نسخ القائمة إلى الحافظة.',
+    shoppingExportPdf: 'تصدير PDF',
+    shoppingPdfTitle: 'قائمة المشتريات',
+    shoppingPdfSubtitle: 'قائمة بقالة منظمة جاهزة للمشاركة أو الطباعة.',
+    shoppingPdfGeneratedOn: 'تاريخ الإنشاء',
+    shoppingPdfFooterNote: 'تم الإعداد بواسطة HomeServer Shopping Cart',
   }
 }
 

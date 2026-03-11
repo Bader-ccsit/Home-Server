@@ -172,7 +172,7 @@ export class ShoppingCartService {
       .slice()
       .reverse()
       .map(r => r.itemText)
-      .join('\n')
+      .join('\n\n')
 
     const uploadUrl = `https://www.googleapis.com/upload/drive/v3/files/${encodeURIComponent(cfg.fileId)}?uploadType=media`
     const uploadRes = await fetch(uploadUrl, {
