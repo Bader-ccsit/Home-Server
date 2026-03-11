@@ -20,6 +20,7 @@ import Al3abiGameView from './pages/Al3abiGameView'
 import Al3abiManage from './pages/Al3abiManage'
 import Al3abiManageGame from './pages/Al3abiManageGame'
 import Al3abiFamilyLocalGame from './pages/Al3abiFamilyLocalGame'
+import PasteMe from './pages/PasteMe'
 import SecretsVerify from './pages/SecretsVerify'
 import Secrets from './pages/Secrets'
 import Reset from './pages/Reset'
@@ -60,6 +61,7 @@ function App() {
               <Route path="/aflami/manage/:id" element={<RequireAuth><AflamiManageMovie /></RequireAuth>} />
               <Route path="/7mlny" element={<RequireAuth><Hmlny /></RequireAuth>} />
               <Route path="/shopping-cart" element={<RequireAuth><ShoppingCart /></RequireAuth>} />
+              <Route path="/pasteme" element={<RequireAuth><PasteMe /></RequireAuth>} />
               <Route path="/al3abi" element={<RequireAuth><Al3abi /></RequireAuth>} />
               <Route path="/al3abi/retro" element={<RequireAuth><Al3abiRetro /></RequireAuth>} />
               <Route path="/al3abi/family" element={<RequireAuth><Al3abiFamily /></RequireAuth>} />
