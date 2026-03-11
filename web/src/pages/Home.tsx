@@ -57,6 +57,14 @@ export default function Home() {
               <AnimatedButton onClick={() => window.location.href = '/shopping-cart'}>{t('openShoppingService')}</AnimatedButton>
             </div>
           </AnimatedCard>
+
+          <AnimatedCard className="p-6">
+            <div className="flex flex-col">
+              <div className="text-lg font-semibold mb-2">{t('al3abiServiceName')}</div>
+              <div className="text-sm opacity-80 mb-4">{t('al3abiServiceDesc')}</div>
+              <AnimatedButton onClick={() => window.location.href = '/al3abi'}>{t('al3abiOpenService')}</AnimatedButton>
+            </div>
+          </AnimatedCard>
         </section>
       </main>
     </div>

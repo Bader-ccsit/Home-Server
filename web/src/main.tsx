@@ -13,6 +13,13 @@ import AflamiView from './pages/AflamiView'
 import AflamiManageMovie from './pages/AflamiManageMovie'
 import Hmlny from './pages/Hmlny'
 import ShoppingCart from './pages/ShoppingCart'
+import Al3abi from './pages/Al3abi'
+import Al3abiRetro from './pages/Al3abiRetro'
+import Al3abiFamily from './pages/Al3abiFamily'
+import Al3abiGameView from './pages/Al3abiGameView'
+import Al3abiManage from './pages/Al3abiManage'
+import Al3abiManageGame from './pages/Al3abiManageGame'
+import Al3abiFamilyLocalGame from './pages/Al3abiFamilyLocalGame'
 import SecretsVerify from './pages/SecretsVerify'
 import Secrets from './pages/Secrets'
 import Reset from './pages/Reset'
@@ -53,6 +60,13 @@ function App() {
               <Route path="/aflami/manage/:id" element={<RequireAuth><AflamiManageMovie /></RequireAuth>} />
               <Route path="/7mlny" element={<RequireAuth><Hmlny /></RequireAuth>} />
               <Route path="/shopping-cart" element={<RequireAuth><ShoppingCart /></RequireAuth>} />
+              <Route path="/al3abi" element={<RequireAuth><Al3abi /></RequireAuth>} />
+              <Route path="/al3abi/retro" element={<RequireAuth><Al3abiRetro /></RequireAuth>} />
+              <Route path="/al3abi/family" element={<RequireAuth><Al3abiFamily /></RequireAuth>} />
+              <Route path="/al3abi/family/local/:slug" element={<RequireAuth><Al3abiFamilyLocalGame /></RequireAuth>} />
+              <Route path="/al3abi/game/:id" element={<RequireAuth><Al3abiGameView /></RequireAuth>} />
+              <Route path="/al3abi/manage" element={<RequireAuth><Al3abiManage /></RequireAuth>} />
+              <Route path="/al3abi/manage/:id" element={<RequireAuth><Al3abiManageGame /></RequireAuth>} />
               <Route path="/secrets/verify" element={<RequireAuth><SecretsVerify /></RequireAuth>} />
               <Route path="/secrets" element={<RequireAuth><Secrets /></RequireAuth>} />
               <Route path="/" element={<Navigate to={hasToken() ? '/home' : '/signin'} replace />} />

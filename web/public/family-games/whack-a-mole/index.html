@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Whack a Mole</title>
+<style>
+body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;background:#132226;color:#e9f4ef;display:grid;place-items:center;min-height:100vh}
+.wrap{width:min(94vw,560px);background:#1d2f34;border:1px solid #4f7078;border-radius:16px;padding:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.hole{height:98px;border-radius:50%;background:#0f1d20;border:2px solid #37575f;display:grid;place-items:center;cursor:pointer}
+.mole{font-size:42px}
+button{padding:8px 12px;border-radius:10px;border:1px solid #5f7f88;background:#2c454c;color:#fff;cursor:pointer}
+</style></head>
+<body>
+<div class="wrap">
+  <h1 style="margin:0">Whack a Mole</h1>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+    <div id="score">Score: 0 | Time: 30</div>
+    <button id="start">Start</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const grid=document.getElementById('grid');
+const scoreEl=document.getElementById('score');
+const start=document.getElementById('start');
+let score=0,time=30,idx=-1,timer=null,tick=null;
+for(let i=0;i<9;i++){const d=document.createElement('div');d.className='hole';d.dataset.i=i;d.onclick=()=>hit(i);grid.appendChild(d)}
+function draw(){[...grid.children].forEach((h,i)=>h.innerHTML=i===idx?'<div class="mole">🐹</div>':''); scoreEl.textContent=`Score: ${score} | Time: ${time}`}
+function hit(i){if(i===idx){score++;idx=-1;draw();}}
+function spawn(){idx=Math.floor(Math.random()*9);draw();}
+function stop(){clearInterval(timer);clearInterval(tick);idx=-1;draw();}
+start.onclick=()=>{stop();score=0;time=30;spawn();timer=setInterval(spawn,650);tick=setInterval(()=>{time--;draw();if(time<=0){stop();scoreEl.textContent=`Final score: ${score}`}},1000)};
+draw();
+</script>
+</body>
+</html>

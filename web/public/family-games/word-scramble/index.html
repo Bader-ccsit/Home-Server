@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Word Scramble</title>
+<style>
+body{margin:0;background:#101e2f;color:#eaf2fb;font-family:Segoe UI,Tahoma,sans-serif;display:grid;place-items:center;min-height:100vh}
+.card{width:min(92vw,460px);padding:18px;background:#1a2a42;border:1px solid #486489;border-radius:16px}
+input,button{padding:10px 12px;border-radius:10px;border:1px solid #56779f;background:#11203a;color:#fff}
+button{cursor:pointer}
+.row{display:flex;gap:8px}
+</style></head>
+<body>
+<div class="card">
+<h1 style="margin:0 0 10px">Word Scramble</h1>
+<div id="q" style="font-size:30px;letter-spacing:3px;margin:14px 0"></div>
+<div class="row"><input id="ans" placeholder="Your answer" style="flex:1"/><button id="ok">Check</button></div>
+<div style="margin-top:10px" id="msg"></div>
+<div style="margin-top:10px" id="score">Score: 0</div>
+</div>
+<script>
+const words=['family','puzzle','banana','rocket','memory','school','friend','garden','happy','winter','summer','orange'];
+let current='',score=0;
+const q=document.getElementById('q'),ans=document.getElementById('ans'),msg=document.getElementById('msg'),scoreEl=document.getElementById('score');
+function mix(w){return w.split('').sort(()=>Math.random()-.5).join('')}
+function next(){current=words[Math.floor(Math.random()*words.length)];let s=mix(current);while(s===current)s=mix(current);q.textContent=s;ans.value='';msg.textContent='';}
+document.getElementById('ok').onclick=()=>{if(ans.value.trim().toLowerCase()===current){score++;msg.textContent='Correct!';}else{msg.textContent='Try again. Hint: '+current[0].toUpperCase()+'...';}scoreEl.textContent='Score: '+score;setTimeout(next,500)};
+ans.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('ok').click()});
+next();
+</script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+1. Apple - A fruit that keeps doctors away
+2. Banana - Long yellow fruit
+3. Cherry - Small red fruit
+4. Mango - Sweet tropical fruit
+5. Lemon - Sour yellow fruit
+6. Peach - Soft fuzzy fruit
+7. Grape - Comes in bunches
+8. Orange - Citrus fruit
+9. Kiwi - Brown outside, green inside
+10. Plum - Purple fruit
+
+11. Car - Has four wheels
+12. Train - Moves on tracks
+13. Airplane - Flies in the sky
+14. Bicycle - Two wheels
+15. Scooter - Small ride-on vehicle
+16. Bus - Carries many passengers
+17. Ship - Travels on water
+18. Rocket - Goes to space
+19. Taxi - Paid ride
+20. Helicopter - Rotating blades
+
+21. Guitar - Six strings
+22. Piano - Has black and white keys
+23. Drum - Played by hitting
+24. Violin - Played with a bow
+25. Flute - Wind instrument
+26. Trumpet - Loud brass instrument
+27. Harp - Large string instrument
+28. Saxophone - Jazz instrument
+29. Cello - Deep string sound
+30. Tambourine - Shaken or hit
+
+31. Mountain - Very tall landform
+32. Island - Land surrounded by water
+33. Canyon - Deep narrow valley
+34. Glacier - Slow-moving ice
+35. Cliff - Very steep rock
+36. Meadow - Open grassy field
+37. Lagoon - Shallow coastal water
+38. Reef - Underwater ridge
+39. Volcano - Can erupt lava
+40. Cave - Natural underground space
+
+41. Teacher - Works in a classroom
+42. Doctor - Helps sick people
+43. Chef - Cooks professionally
+44. Pilot - Flies aircraft
+45. Farmer - Grows crops
+46. Artist - Creates art
+47. Writer - Creates stories
+48. Engineer - Solves technical problems
+49. Nurse - Assists in medical care
+50. Driver - Operates vehicles
+
+51. Laptop - Portable computer
+52. Keyboard - Used for typing
+53. Mouse - Controls the cursor
+54. Monitor - Displays images
+55. Printer - Produces paper copies
+56. Router - Provides internet
+57. Speaker - Plays sound
+58. Microphone - Captures voice
+59. Charger - Powers devices
+60. Tablet - Touchscreen device
+
+61. Winter - Coldest season
+62. Summer - Hottest season
+63. Spring - Flowers bloom
+64. Autumn - Leaves fall
+65. Rainbow - Appears after rain
+66. Blizzard - Heavy snowstorm
+67. Hurricane - Strong rotating storm
+68. Tornado - Spinning wind column
+69. Fog - Low visibility
+70. Frost - Ice on surfaces
+
+71. Courage - Facing fear
+72. Honesty - Telling the truth
+73. Kindness - Being gentle
+74. Wisdom - Deep understanding
+75. Patience - Waiting calmly
+76. Loyalty - Staying faithful
+77. Hope - Positive expectation
+78. Joy - Feeling of happiness
+79. Peace - No conflict
+80. Trust - Confidence in someone
+
+81. Cookie - Sweet baked treat
+82. Sandwich - Two slices of bread
+83. Salad - Mixed vegetables
+84. Soup - Warm liquid food
+85. Pizza - Round cheesy dish
+86. Burger - Meat between buns
+87. Pasta - Italian noodles
+88. Steak - Cooked meat
+89. Omelet - Eggs cooked folded
+90. Pancake - Flat breakfast food
+
+91. Candle - Gives light when lit
+92. Compass - Shows direction
+93. Helmet - Protects the head
+94. Backpack - Carries items
+95. Notebook - For writing notes
+96. Scissors - Used for cutting
+97. Ladder - Helps you climb
+98. Telescope - For viewing far objects
+99. Magnet - Attracts metal
+100. Anchor - Keeps a ship still
+101. Shadow - Dark shape on the ground
+102. Breeze - Light gentle wind
+103. Thunderstorm - Loud and rainy weather
+104. Horizon - Where sky meets land
+105. Galaxy - Huge star system
+106. Planet - Orbits a star
+107. Meteor - Burns in the sky
+108. Orbit - Circular path
+109. Eclipse - Sun or moon covered
+110. Gravity - Pulls things down
+
+111. Library - Place full of books
+112. Bakery - Sells fresh bread
+113. Pharmacy - Sells medicine
+114. Theater - Shows movies or plays
+115. Stadium - Big sports venue
+116. Aquarium - Home for fish
+117. Zoo - Animals live here
+118. Factory - Produces goods
+119. Workshop - Tools and crafting
+120. Office - Work environment
+
+121. Scientist - Studies the world
+122. Detective - Solves mysteries
+123. Carpenter - Works with wood
+124. Plumber - Fixes pipes
+125. Barber - Cuts hair
+126. Designer - Creates visuals
+127. Journalist - Writes news
+128. Librarian - Manages books
+129. Astronaut - Travels to space
+130. Firefighter - Fights fires
+
+131. Diamond - Precious stone
+132. Crystal - Transparent mineral
+133. Marble - Smooth stone
+134. Clay - Soft earth material
+135. Iron - Strong metal
+136. Copper - Reddish metal
+137. Silver - Shiny metal
+138. Coal - Black fuel
+139. Quartz - Common mineral
+140. Granite - Hard rock
+
+141. Lantern - Portable light
+142. Compass - Shows direction
+143. Whistle - Makes sharp sound
+144. Binoculars - See far away
+145. Flashlight - Handheld light
+146. Toolbox - Holds tools
+147. Helmet - Protects head
+148. Stopwatch - Measures time
+149. Keychain - Holds keys
+150. Thermometer - Measures temperature
+
+151. Courage - Facing danger
+152. Freedom - Ability to choose
+153. Memory - Stored thoughts
+154. Desire - Strong want
+155. Fear - Feeling of danger
+156. Pride - Feeling of achievement
+157. Anger - Strong emotion
+158. Faith - Strong belief
+159. Doubt - Uncertainty
+160. Gratitude - Feeling thankful
+
+161. Castle - Large stone fortress
+162. Bridge - Connects two sides
+163. Tower - Tall structure
+164. Tunnel - Underground passage
+165. Harbor - Boats dock here
+166. Cabin - Small wooden house
+167. Mansion - Very large home
+168. Cottage - Small cozy house
+169. Fortress - Strong defense building
+170. Lighthouse - Guides ships
+
+171. Falcon - Fast hunting bird
+172. Dolphin - Smart sea animal
+173. Penguin - Bird that can’t fly
+174. Shark - Large sea predator
+175. Octopus - Eight arms
+176. Seahorse - Tiny sea creature
+177. Eagle - Powerful bird
+178. Panther - Black wild cat
+179. Buffalo - Strong large animal
+180. Hedgehog - Spiky creature
+
+181. Puzzle - Needs solving
+182. Riddle - Question with trick
+183. Secret - Hidden information
+184. Mystery - Unknown event
+185. Clue - Helps solve something
+186. Code - Hidden message
+187. Symbol - Represents meaning
+188. Pattern - Repeated design
+189. Logic - Clear reasoning
+190. Strategy - Plan to win
+
+191. Volcano - Erupts lava
+192. Earthquake - Shaking ground
+193. Avalanche - Falling snow
+194. Wildfire - Spreads quickly
+195. Tsunami - Huge wave
+196. Drought - No rain
+197. Blizzard - Heavy snowstorm
+198. Landslide - Falling rocks
+199. Cyclone - Spinning storm
+200. Heatwave - Extreme heat
+201. Lantern - Used to light the night
+202. Compass - Helps find direction
+203. Telescope - For looking at stars
+204. Microscope - For tiny objects
+205. Calculator - Solves equations
+206. Notebook - Used for writing ideas
+207. Calendar - Tracks dates
+208. Envelope - Holds letters
+209. Bookmark - Saves your place
+210. Clipboard - Holds papers
+
+211. Whisper - Very soft voice
+212. Echo - Sound that repeats
+213. Melody - Pleasant tune
+214. Rhythm - Beat pattern
+215. Chorus - Repeated song part
+216. Harmony - Notes that blend
+217. Lyric - Words of a song
+218. Accent - Way of speaking
+219. Dialogue - Conversation between two
+220. Narrator - Tells a story
+
+221. Lanternfish - Deep-sea glowing fish
+222. Seahawk - Bird near the ocean
+223. Walrus - Has long tusks
+224. Reindeer - Lives in cold regions
+225. Lynx - Wild cat with ear tufts
+226. Armadillo - Has a hard shell
+227. Koala - Eats eucalyptus
+228. Sloth - Moves very slowly
+229. Parrot - Mimics sounds
+230. Flamingo - Pink long-legged bird
+
+231. Potion - Magical liquid
+232. Spellbook - Holds magic spells
+233. Crystalball - Used for visions
+234. Cauldron - Witch’s pot
+235. Amulet - Protective charm
+236. Rune - Ancient symbol
+237. Portal - Door to another world
+238. Phoenix - Bird reborn from fire
+239. Dragon - Mythical fire creature
+240. Unicorn - Horse with a horn
+
+241. Blueprint - Technical drawing
+242. Circuit - Electrical path
+243. Voltage - Electrical pressure
+244. Magnetism - Force of attraction
+245. Frequency - Repeated cycles
+246. Signal - Transmitted message
+247. Algorithm - Step-by-step process
+248. Database - Stores information
+249. Firewall - Protects networks
+250. Interface - Point of interaction
+
+251. Courage - Strength in fear
+252. Empathy - Feeling others’ emotions
+253. Integrity - Doing what’s right
+254. Curiosity - Desire to learn
+255. Ambition - Drive to succeed
+256. Discipline - Self-control
+257. Creativity - Thinking differently
+258. Confidence - Belief in yourself
+259. Compassion - Caring for others
+260. Resilience - Ability to recover
+
+261. Marsh - Wet grassy land
+262. Plateau - Flat high land
+263. Delta - River mouth shape
+264. Oasis - Water in desert
+265. Fjord - Deep narrow sea inlet
+266. Prairie - Wide grassland
+267. Volcano - Mountain of lava
+268. Basin - Low land area
+269. Peninsula - Land with water on 3 sides
+270. Archipelago - Group of islands
+
+271. Blueprint - Plan for building
+272. Prototype - First model
+273. Mechanism - System of parts
+274. Lever - Simple machine
+275. Gear - Rotating tooth wheel
+276. Valve - Controls flow
+277. Sensor - Detects changes
+278. Reactor - Produces energy
+279. Generator - Creates electricity
+280. Conveyor - Moves objects
+
+281. Lantern - Portable light source
+282. Telescope - Views distant objects
+283. Compass - Shows direction
+284. Stopwatch - Measures time
+285. Thermos - Keeps drinks warm
+286. Backpack - Carries supplies
+287. Flashlight - Handheld light
+288. Keycard - Unlocks doors
+289. Headset - For audio communication
+290. Toolbox - Holds tools
+
+291. Blueprint - Technical plan
+292. Drafting - Drawing designs
+293. Surveying - Measuring land
+294. Welding - Joining metal
+295. Carpentry - Working with wood
+296. Masonry - Working with stone
+297. Plumbing - Water systems
+298. Wiring - Electrical setup
+299. Painting - Adding color
+300. Tiling - Laying ceramic pieces
+301. Blueprint - Detailed technical plan
+302. Framework - Supporting structure
+303. Protocol - Set of rules
+304. Sequence - Ordered steps
+305. Variable - Changes value
+306. Function - Performs a task
+307. Module - Part of a system
+308. Network - Connected system
+309. Archive - Stored collection
+310. Console - Command interface
+
+311. Horizon - Line where sky meets earth
+312. Twilight - Light after sunset
+313. Sunrise - Beginning of daylight
+314. Sunset - End of daylight
+315. Monsoon - Seasonal heavy rain
+316. Overcast - Cloudy sky
+317. Drizzle - Light rain
+318. Downpour - Heavy rain
+319. Wildfire - Fire spreading outdoors
+320. Earthquake - Shaking ground
+
+321. Falconry - Training hunting birds
+322. Blacksmith - Works with metal
+323. Botanist - Studies plants
+324. Geologist - Studies rocks
+325. Archaeologist - Studies ancient remains
+326. Navigator - Guides direction
+327. Composer - Writes music
+328. Sculptor - Creates statues
+329. Tailor - Makes clothing
+330. Locksmith - Works with locks
+
+331. Sapphire - Blue gemstone
+332. Emerald - Green gemstone
+333. Ruby - Red gemstone
+334. Topaz - Golden gemstone
+335. Amethyst - Purple crystal
+336. Obsidian - Volcanic glass
+337. Limestone - Soft rock
+338. Basalt - Dark volcanic rock
+339. Sandstone - Layered rock
+340. Meteorite - Rock from space
+
+341. Compass - Points north
+342. Telescope - Views distant stars
+343. Barometer - Measures pressure
+344. Altimeter - Measures height
+345. Stopwatch - Tracks seconds
+346. Thermometer - Measures heat
+347. Periscope - Views above water
+348. Megaphone - Amplifies voice
+349. Projector - Displays images
+350. Scanner - Digitizes documents
+
+351. Courage - Strength in difficulty
+352. Serenity - Calm peaceful state
+353. Ambition - Desire to achieve
+354. Gratitude - Feeling thankful
+355. Empathy - Understanding feelings
+356. Integrity - Strong moral values
+357. Curiosity - Desire to learn
+358. Determination - Strong persistence
+359. Optimism - Expecting good outcomes
+360. Discipline - Self-control
+
+361. Harbor - Safe place for ships
+362. Outpost - Remote station
+363. Citadel - Strong fortress
+364. Observatory - For watching stars
+365. Marketplace - Busy trading area
+366. Courtyard - Open space inside walls
+367. Pavilion - Light outdoor structure
+368. Sanctuary - Safe protected place
+369. Dungeon - Underground chamber
+370. Balcony - Elevated outdoor platform
+
+371. Falcon - Fast hunting bird
+372. Vulture - Scavenger bird
+373. Sparrow - Small common bird
+374. Peacock - Colorful feathers
+375. Raven - Black intelligent bird
+376. Toucan - Large colorful beak
+377. Pelican - Large throat pouch
+378. Heron - Long legs and neck
+379. Parakeet - Small pet bird
+380. Woodpecker - Drills into trees
+
+381. Potion - Magical liquid
+382. Spell - Magical command
+383. Enchantment - Magic effect
+384. Sorcerer - Magic user
+385. Familiar - Magical companion
+386. Grimoire - Book of spells
+387. Rune - Ancient symbol
+388. Portal - Door to another realm
+389. Chimera - Mixed creature
+390. Gargoyle - Stone guardian
+
+391. Blueprint - Design for building
+392. Mechanism - System of moving parts
+393. Turbine - Rotating engine
+394. Circuitry - Electrical layout
+395. Hydraulics - Fluid-powered system
+396. Pneumatics - Air-powered system
+397. Generator - Produces electricity
+398. Compressor - Increases pressure
+399. Transformer - Changes voltage
+400. Conductor - Allows electricity flow
+401. Stardust - Tiny cosmic particles
+402. Nebula - Cloud of space gas
+403. Supernova - Exploding star
+404. Comet - Ice rock with a tail
+405. Asteroid - Rocky space object
+406. Cosmos - The entire universe
+407. Orbit - Path around a star
+408. Eclipse - One body blocking another
+409. Galaxy - Massive star system
+410. Pulsar - Spinning neutron star
+
+411. Blueprint - Detailed construction plan
+412. Draft - Early version of work
+413. Formula - Mathematical expression
+414. Hypothesis - Scientific guess
+415. Theory - Well-tested idea
+416. Concept - Abstract idea
+417. Method - Way of doing something
+418. Structure - Organized arrangement
+419. Framework - Supporting outline
+420. Analysis - Detailed examination
+
+421. Coral - Underwater organism
+422. Kelp - Large seaweed
+423. Tide - Rising and falling water
+424. Current - Moving water flow
+425. Whirlpool - Spinning water circle
+426. Lagoon - Shallow coastal water
+427. Estuary - River meets sea
+428. Mangrove - Tree in salty water
+429. Seabed - Bottom of the ocean
+430. Shipwreck - Sunken ship
+
+431. Falconer - Trains hunting birds
+432. Herbalist - Uses plants for healing
+433. Cartographer - Draws maps
+434. Metallurgist - Studies metals
+435. Astronomer - Studies space
+436. Linguist - Studies languages
+437. Curator - Manages museum items
+438. Diplomat - Represents a country
+439. Strategist - Plans long-term moves
+440. Analyst - Interprets data
+
+441. Sapphire - Blue precious stone
+442. Onyx - Black gemstone
+443. Jade - Green ornamental stone
+444. Citrine - Yellow quartz
+445. Opal - Color-shifting gem
+446. Amber - Fossilized tree resin
+447. Pearl - Made inside oysters
+448. Coralstone - Reef-based material
+449. Moonstone - Shiny pale gem
+450. Bloodstone - Dark green with red
+
+451. Lantern - Light source in darkness
+452. Compass - Helps navigate
+453. Sextant - Measures angles at sea
+454. Telescope - Views distant objects
+455. Chronometer - Precise timekeeper
+456. Barometer - Measures air pressure
+457. Altimeter - Measures altitude
+458. Gyroscope - Maintains orientation
+459. Periscope - Views above obstacles
+460. Thermometer - Measures temperature
+
+461. Serenity - Deep peacefulness
+462. Bravery - Facing danger boldly
+463. Humility - Not seeking praise
+464. Generosity - Giving freely
+465. Forgiveness - Letting go of anger
+466. Awareness - Understanding surroundings
+467. Insight - Deep understanding
+468. Balance - Stability in life
+469. Devotion - Strong dedication
+470. Harmony - Perfect agreement
+
+471. Citadel - Strong defensive fortress
+472. Outpost - Remote guarded station
+473. Barracks - Housing for soldiers
+474. Observatory - For watching stars
+475. Marketplace - Busy trading area
+476. Courtyard - Open central area
+477. Pavilion - Light outdoor structure
+478. Sanctuary - Safe protected place
+479. Dungeon - Underground chamber
+480. Fortress - Strong defensive building
+
+481. Timber - Processed wood
+482. Alloy - Metal mixture
+483. Circuitry - Electrical pathways
+484. Turbine - Rotating engine
+485. Reactor - Produces energy
+486. Compressor - Increases pressure
+487. Generator - Creates electricity
+488. Conductor - Allows current flow
+489. Insulator - Blocks electricity
+490. Catalyst - Speeds up reactions
+
+491. Chronicle - Recorded events
+492. Manuscript - Handwritten document
+493. Archive - Stored historical records
+494. Testament - Written declaration
+495. Codex - Ancient book
+496. Inscription - Words carved in stone
+497. Scroll - Rolled parchment
+498. Ledger - Record of accounts
+499. Blueprint - Technical drawing
+500. Artifact - Object from the past

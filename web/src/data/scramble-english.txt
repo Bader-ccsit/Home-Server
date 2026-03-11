@@ -1,0 +1,436 @@
+1. Anchor - Holds a ship in place
+2. Breeze - Light gentle wind
+3. Canyon - Deep narrow valley
+4. Dazzle - Impress with brightness
+5. Ember - Glowing coal fragment
+6. Frost - Thin ice layer
+7. Glare - Strong bright light
+8. Harbor - Safe place for ships
+9. Ivory - Hard white material
+10. Jigsaw - Puzzle with pieces
+
+11. Kernel - Core of a seed
+12. Lantern - Portable light source
+13. Meadow - Open grassy field
+14. Nimbus - Type of cloud
+15. Orbit - Path around a body
+16. Prism - Splits light into colors
+17. Quartz - Hard crystal mineral
+18. Ripple - Small wave motion
+19. Summit - Highest point
+20. Timber - Processed wood
+
+21. Velvet - Soft smooth fabric
+22. Willow - Flexible tree
+23. Xenon - Noble gas element
+24. Yonder - At some distance
+25. Zephyr - Gentle breeze
+26. Brisk - Quick and energetic
+27. Clutch - Hold tightly
+28. Drift - Move slowly
+29. Elbow - Arm joint
+30. Forge - Shape metal by heat
+
+31. Gloom - Partial darkness
+32. Hinge - Door pivot point
+33. Ingot - Metal block
+34. Joust - Medieval duel
+35. Knead - Work dough
+36. Lumen - Unit of light
+37. Mirth - Joyful amusement
+38. Nudge - Gentle push
+39. Overt - Not hidden
+40. Plume - Feather or smoke column
+
+41. Quirk - Strange habit
+42. Rigid - Not flexible
+43. Shard - Broken piece
+44. Tweak - Adjust slightly
+45. Usher - Guide someone
+46. Verge - Edge or border
+47. Whirl - Spin rapidly
+48. Yield - Produce or give way
+49. Zesty - Full of flavor
+50. Bound - Leap forward
+
+51. Crave - Strong desire
+52. Drape - Hang loosely
+53. Elite - Best of a group
+54. Fable - Story with a moral
+55. Graft - Join plant tissues
+56. Hound - Hunting dog
+57. Knoll - Small rounded hill
+58. Mellow - Soft and pleasant
+59. Nectar - Sweet plant liquid
+60. Oracle - Source of wisdom
+
+61. Pebble - Small smooth stone
+62. Quiver - Arrow container
+63. Rustic - Rural and simple
+64. Spiral - Curved winding shape
+65. Wander - Move without direction
+66. Anchor - Holds something steady
+67. Canvas - Strong woven fabric
+68. Falcon - Fast hunting bird
+69. Glider - Engine‑less aircraft
+70. Hammer - Tool for striking
+
+71. Indigo - Deep blue color
+72. Kernel - Central part
+73. Lantern - Light with a handle
+74. Meadow - Field of grass
+75. Nimbus - Rain cloud type
+76. Opal - Iridescent gemstone
+77. Pixel - Smallest image unit
+78. Quartz - Hard mineral
+79. Ripple - Small wave
+80. Summit - Mountain top
+
+81. Tundra - Frozen treeless land
+82. Umber - Brownish pigment
+83. Vessel - Container or ship
+84. Whimsy - Playful odd idea
+85. Yarrow - Medicinal plant
+86. Zodiac - Astrological circle
+87. Alloy - Metal mixture
+88. Bramble - Thorny shrub
+89. Cinder - Burned coal piece
+90. Embark - Begin a journey
+
+91. Fathom - Understand deeply
+92. Glance - Quick look
+93. Harbor - Safe docking place
+94. Jester - Medieval entertainer
+95. Kindle - Start a fire
+96. Luster - Soft reflected light
+97. Mosaic - Pattern of small pieces
+98. Nomad - Wandering person
+99. Outset - Beginning of something
+100. Ponder - Think carefully
+101. Quench - Satisfy thirst
+102. Rustic - Simple and rural
+103. Saffron - Golden spice
+104. Unison - Acting together
+105. Vortex - Spinning motion
+106. Whimsy - Playful odd idea
+107. Yarrow - Medicinal herb
+108. Zenith - Highest point
+109. Alloy - Metal mixture
+110. Bramble - Thorny shrub
+
+111. Cinder - Burned coal piece
+112. Doodle - Simple sketch
+113. Ember - Glowing coal
+114. Fringe - Decorative edge
+115. Glisten - Shine softly
+116. Hollow - Empty inside
+117. Inward - Directed inside
+118. Jumble - Mixed mess
+119. Keystone - Central support
+120. Lantern - Portable light
+
+121. Meadow - Grassy field
+122. Nomad - Wandering person
+123. Outset - Beginning stage
+124. Ponder - Think deeply
+125. Quiver - Arrow holder
+126. Rewind - Go backward
+127. Shiver - Shake from cold
+128. Tangle - Twist together
+129. Untold - Not revealed
+130. Wander - Move aimlessly
+
+131. Xenial - Friendly to guests
+132. Yarn - Long thread
+133. Zealot - Fanatically devoted person
+134. Amber - Fossilized resin
+135. Brisket - Cut of beef
+136. Clarity - Clear understanding
+137. Driftwood - Wood washed ashore
+138. Essence - Core meaning
+139. Foliage - Plant leaves
+140. Granite - Hard rock
+
+141. Horizon - Where sky meets earth
+142. Insight - Deep understanding
+143. Journey - Long trip
+144. Kingdom - Land ruled by a king
+145. Luster - Soft shine
+146. Mosaic - Pattern of small pieces
+147. Nectar - Sweet plant liquid
+148. Oracle - Source of prophecy
+149. Pebble - Small stone
+150. Quench - Put out or satisfy
+
+151. Rustic - Country‑style
+152. Saffron - Expensive spice
+153. Timber - Wood for building
+154. Unison - Together as one
+155. Vessel - Container or ship
+156. Whimsy - Playful imagination
+157. Yonder - At a distance
+158. Zodiac - Astrological signs
+159. Arctic - Extremely cold region
+160. Breeze - Light wind
+
+161. Cipher - Secret code
+162. Dazzle - Impress with brilliance
+163. Ember - Burning fragment
+164. Falcon - Fast hunting bird
+165. Glider - Aircraft without engine
+166. Hammer - Tool for striking
+167. Indigo - Deep blue shade
+168. Kernel - Seed core
+169. Lantern - Light with handle
+170. Meadow - Open field
+
+171. Nimbus - Rain cloud
+172. Opal - Iridescent gemstone
+173. Prism - Splits light
+174. Quartz - Hard mineral
+175. Ripple - Small wave
+176. Summit - Mountain peak
+177. Tundra - Frozen plain
+178. Umber - Brown pigment
+179. Vessel - Ship or container
+180. Willow - Flexible tree
+
+181. Xenon - Noble gas
+182. Yarrow - Healing herb
+183. Zenith - Highest point
+184. Alloy - Combined metals
+185. Bramble - Thorny plant
+186. Cinder - Burned residue
+187. Embark - Begin a journey
+188. Fathom - Understand deeply
+189. Glance - Quick look
+190. Harbor - Safe docking place
+
+191. Jester - Medieval entertainer
+192. Kindle - Start a fire
+193. Luster - Gentle shine
+194. Mosaic - Artistic pattern
+195. Nomad - Traveler without home
+196. Outset - Starting point
+197. Ponder - Reflect deeply
+198. Quiver - Tremble slightly
+199. Rustic - Rural style
+200. Saffron - Golden seasoning
+201. Apex - Highest point
+202. Brine - Salty water
+203. Crust - Hard outer layer
+204. Dwell - Live in a place
+205. Ember - Glowing coal piece
+206. Forge - Shape metal by heat
+207. Gloom - Dim or dark mood
+208. Haste - Quick movement
+209. Ingot - Solid metal block
+210. Jolly - Cheerful and lively
+
+211. Kneel - Rest on one knee
+212. Latch - Door fastener
+213. Mirth - Joyful amusement
+214. Noble - Having high character
+215. Ounce - Unit of weight
+216. Prism - Splits light into colors
+217. Quill - Feather writing tool
+218. Ripple - Small wave motion
+219. Swoop - Move downward quickly
+220. Torch - Handheld light
+
+221. Unity - Being together as one
+222. Vowel - A, E, I, O, U
+223. Woven - Interlaced threads
+224. Yacht - Luxury boat
+225. Zeal - Great enthusiasm
+226. Brisk - Quick and energetic
+227. Climb - Move upward
+228. Elbow - Arm joint
+229. Forge - Shape by heating
+230. Hinge - Door pivot point
+
+231. Inward - Directed inside
+232. Joust - Medieval duel
+233. Knead - Work dough
+234. Lumen - Unit of brightness
+235. Mound - Small hill
+236. Nudge - Gentle push
+237. Overt - Not hidden
+238. Plume - Feather or smoke trail
+239. Quirk - Odd behavior
+240. Rigid - Not flexible
+
+241. Shard - Broken fragment
+242. Tweak - Adjust slightly
+243. Usher - Guide someone
+244. Verge - Edge or border
+245. Whirl - Spin rapidly
+246. Yield - Produce or surrender
+247. Zesty - Full of flavor
+248. Bound - Leap forward
+249. Crave - Strong desire
+250. Drape - Hang loosely
+
+251. Elite - Best of a group
+252. Fable - Story with a moral
+253. Graft - Join plant tissues
+254. Hound - Hunting dog
+255. Knoll - Small rounded hill
+256. Mellow - Soft and pleasant
+257. Nectar - Sweet plant liquid
+258. Oracle - Source of prophecy
+259. Pebble - Small stone
+260. Quiver - Arrow container
+
+261. Rustic - Simple and rural
+262. Spiral - Curved winding shape
+263. Timber - Wood for building
+264. Velvet - Soft smooth fabric
+265. Wander - Move without direction
+266. Xenon - Noble gas
+267. Yellow - Bright color
+268. Zephyr - Gentle breeze
+269. Anchor - Holds a ship
+270. Canvas - Strong woven cloth
+
+271. Dazzle - Impress with brightness
+272. Echoes - Repeated sounds
+273. Falcon - Fast hunting bird
+274. Glider - Aircraft without engine
+275. Hammer - Tool for striking
+276. Indigo - Deep blue shade
+277. Jigsaw - Puzzle with pieces
+278. Kernel - Seed core
+279. Lantern - Portable light
+280. Meadow - Open grassy field
+
+281. Nimbus - Rain cloud
+282. Opal - Iridescent gemstone
+283. Prism - Splits light
+284. Quartz - Hard mineral
+285. Ripple - Small wave
+286. Summit - Highest point
+287. Tundra - Frozen treeless land
+288. Umber - Brown pigment
+289. Vessel - Container or ship
+290. Willow - Flexible tree
+
+291. Xenial - Friendly to guests
+292. Yonder - At some distance
+293. Zodiac - Astrological circle
+294. Alloy - Metal mixture
+295. Bramble - Thorny shrub
+296. Cinder - Burned coal piece
+297. Embark - Begin a journey
+298. Fathom - Understand deeply
+299. Glance - Quick look
+300. Harbor - Safe docking place
+301. Bravado - Show of boldness
+302. Cipher - Secret code
+303. Diligent - Hard‑working
+304. Enigma - Mysterious puzzle
+305. Fervor - Intense passion
+306. Glimmer - Faint light
+307. Harpoon - Long fishing spear
+308. Insight - Deep understanding
+309. Jargon - Specialized language
+310. Keystone - Central support
+
+311. Lattice - Crisscross pattern
+312. Mariner - Sailor at sea
+313. Notion - Small idea
+314. Outland - Distant region
+315. Pinnace - Small sailing boat
+316. Quibble - Minor objection
+317. Reverie - Daydream
+318. Solace - Comfort in distress
+319. Tangent - Touching at one point
+320. Umbral - Related to shadow
+
+321. Verdant - Green with plants
+322. Whittle - Carve with a knife
+323. Yonder - At some distance
+324. Zenith - Highest point
+325. Arcane - Known by few
+326. Bristle - Stand upright
+327. Cradle - Baby’s bed
+328. Dapple - Mark with spots
+329. Elapse - Pass in time
+330. Fumble - Handle clumsily
+
+331. Glacial - Extremely cold
+332. Hurdle - Obstacle to overcome
+333. Infuse - Fill with quality
+334. Juggle - Toss objects skillfully
+335. Kindle - Ignite or inspire
+336. Linger - Stay longer than expected
+337. Mosaic - Pattern of pieces
+338. Nettle - Irritate or annoy
+339. Oracle - Source of prophecy
+340. Pummel - Strike repeatedly
+
+341. Quench - Satisfy or extinguish
+342. Ransack - Search violently
+343. Shackle - Restrain movement
+344. Tundra - Frozen plain
+345. Unravel - Untangle or solve
+346. Valiant - Brave and determined
+347. Whisker - Hair on an animal’s face
+348. Yonder - Far away
+349. Zealous - Full of enthusiasm
+350. Amber - Golden fossil resin
+
+351. Bravest - Most courageous
+352. Clatter - Loud rattling sound
+353. Drench - Soak completely
+354. Embody - Represent clearly
+355. Fathom - Understand deeply
+356. Glimmer - Soft faint light
+357. Harshly - In a rough manner
+358. Inquire - Ask for information
+359. Jostle - Push roughly
+360. Locket - Small pendant container
+
+361. Marbled - Streaked with color
+362. Nimbus - Rain cloud
+363. Outrun - Run faster than
+364. Picket - Guard or protester
+365. Quorum - Minimum group needed
+366. Riddle - Puzzle question
+367. Shiver - Shake from cold
+368. Thicket - Dense bushes
+369. Unison - Acting together
+370. Vortex - Spinning motion
+
+371. Wistful - Longing or sad
+372. Yonder - At a distance
+373. Zenith - Peak or top
+374. Alloy - Metal mixture
+375. Bramble - Thorny shrub
+376. Cinder - Burned coal piece
+377. Embark - Begin a journey
+378. Fervent - Passionately intense
+379. Glance - Quick look
+380. Harbor - Safe docking place
+
+381. Jester - Medieval entertainer
+382. Kindle - Start a fire
+383. Luster - Soft reflected shine
+384. Mosaic - Artistic pattern
+385. Nomad - Wandering traveler
+386. Outset - Starting point
+387. Ponder - Think deeply
+388. Quiver - Tremble slightly
+389. Rustic - Rural and simple
+390. Saffron - Golden spice
+
+391. Timber - Wood for building
+392. Unison - Together as one
+393. Vessel - Container or ship
+394. Whimsy - Playful imagination
+395. Yarrow - Medicinal herb
+396. Zodiac - Astrological circle
+397. Arctic - Extremely cold region
+398. Breeze - Light wind
+399. Cipher - Secret writing
+400. Dazzle - Impress with brilliance

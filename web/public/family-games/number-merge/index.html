@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Number Merge</title>
+<style>
+body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;background:#132033;color:#ecf2f8;display:grid;place-items:center;min-height:100vh}
+.wrap{width:min(92vw,420px);background:#1d2b42;border:1px solid #46628a;border-radius:16px;padding:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.cell{height:76px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:24px;background:#2a3b57}
+small{opacity:.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1 style="margin:0">Number Merge</h1>
+<small>Use arrow keys. Merge same numbers.</small>
+<div id="score">Score: 0</div>
+<div class="grid" id="grid"></div>
+</div>
+<script>
+let b=Array(16).fill(0),score=0;
+const g=document.getElementById('grid'),s=document.getElementById('score');
+function rand(){const e=b.map((v,i)=>v?null:i).filter(v=>v!==null); if(!e.length)return; b[e[Math.floor(Math.random()*e.length)]]=Math.random()<.9?2:4;}
+function row(r){return b.slice(r*4,r*4+4)}
+function setRow(r,a){for(let i=0;i<4;i++)b[r*4+i]=a[i]}
+function comp(a){a=a.filter(Boolean);for(let i=0;i<a.length-1;i++)if(a[i]===a[i+1]){a[i]*=2;score+=a[i];a.splice(i+1,1)}while(a.length<4)a.push(0);return a}
+function moveLeft(){let ch=false;for(let r=0;r<4;r++){const a=row(r),n=comp([...a]);if(a.join()!=n.join())ch=true;setRow(r,n)}return ch}
+function rot(){const n=Array(16).fill(0);for(let r=0;r<4;r++)for(let c=0;c<4;c++)n[c*4+(3-r)]=b[r*4+c];b=n}
+function move(dir){let ch=false;if(dir==='L')ch=moveLeft();if(dir==='U'){rot();rot();rot();ch=moveLeft();rot();}if(dir==='R'){rot();rot();ch=moveLeft();rot();rot();}if(dir==='D'){rot();ch=moveLeft();rot();rot();rot();}if(ch)rand();draw();}
+function draw(){g.innerHTML='';b.forEach(v=>{const d=document.createElement('div');d.className='cell';d.textContent=v||'';d.style.background=v?`hsl(${220-v*2},45%,${Math.max(30,72-v/6)}%)`:'#2a3b57';g.appendChild(d)});s.textContent='Score: '+score}
+rand();rand();draw();
+document.addEventListener('keydown',e=>{const m={ArrowLeft:'L',ArrowRight:'R',ArrowUp:'U',ArrowDown:'D'}[e.key];if(m){e.preventDefault();move(m)}});
+</script>
+</body>
+</html>

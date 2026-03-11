@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Match</title>
+  <style>
+    body{font-family:Segoe UI,Tahoma,sans-serif;background:#0f1b2d;color:#e7f0fa;margin:0;display:grid;place-items:center;min-height:100vh}
+    .card{width:min(94vw,560px);padding:18px;background:#1a2940;border:1px solid #3f587b;border-radius:16px}
+    .board{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+    .tile{height:78px;border-radius:12px;border:1px solid #4f709b;background:#152238;color:#fff;font-size:30px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Memory Match</h1>
+    <div id="stats">Moves: 0</div>
+    <div class="board" id="board"></div>
+  </div>
+<script>
+const icons=['🍎','🚗','🐼','⚽','🎲','🎵','🌙','🚀'];
+let deck=[...icons,...icons].sort(()=>Math.random()-0.5);
+let open=[]; let lock=false; let moves=0; let solved=0;
+const board=document.getElementById('board');
+const stats=document.getElementById('stats');
+function draw(){
+  board.innerHTML='';
+  deck.forEach((v,i)=>{
+    const b=document.createElement('button');
+    b.className='tile';
+    const isOpen=open.includes(i) || deck[i]==='';
+    b.textContent=isOpen? (v||'✅') : '❓';
+    b.onclick=()=>flip(i);
+    board.appendChild(b);
+  });
+  stats.textContent = solved===8 ? `Great! Finished in ${moves} moves` : `Moves: ${moves}`;
+}
+function flip(i){
+  if(lock || open.includes(i) || deck[i]==='') return;
+  open.push(i); draw();
+  if(open.length===2){
+    moves++; const [a,b]=open;
+    if(deck[a]===deck[b]){ deck[a]=''; deck[b]=''; solved++; open=[]; draw(); }
+    else { lock=true; setTimeout(()=>{open=[]; lock=false; draw();},700); }
+  }
+}
+draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Reaction Duel</title>
+<style>
+body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;background:#191422;color:#f3eefe;display:grid;place-items:center;min-height:100vh}
+.card{width:min(92vw,520px);background:#2a1d3b;border:1px solid #5f4b7f;border-radius:16px;padding:16px}
+.zone{height:240px;border-radius:14px;border:2px dashed #7b63a2;display:grid;place-items:center;font-size:28px;user-select:none;cursor:pointer}
+button{margin-top:10px;padding:10px 14px;border-radius:10px;border:1px solid #8f74bc;background:#452f68;color:#fff;cursor:pointer}
+</style></head>
+<body>
+<div class="card">
+<h1 style="margin:0 0 10px">Reaction Duel</h1>
+<div id="zone" class="zone">Press Start</div>
+<div id="res" style="margin-top:10px">Fastest reaction wins!</div>
+<button id="start">Start Round</button>
+</div>
+<script>
+const zone=document.getElementById('zone'); const res=document.getElementById('res');
+let startAt=0,armed=false,ready=false,t;
+function reset(){clearTimeout(t);armed=false;ready=false;zone.style.background='transparent';zone.textContent='Wait for GREEN';}
+document.getElementById('start').onclick=()=>{reset();armed=true;const delay=1200+Math.random()*2200;t=setTimeout(()=>{ready=true;startAt=performance.now();zone.style.background='#1f9d62';zone.textContent='TAP NOW!';},delay)};
+zone.onclick=()=>{
+  if(!armed){res.textContent='Press Start first';return}
+  if(!ready){res.textContent='Too early!';reset();return}
+  const ms=Math.round(performance.now()-startAt);res.textContent=`Reaction: ${ms} ms`;armed=false;ready=false;zone.style.background='#28407a';zone.textContent='Great! Start another round';
+};
+</script>
+</body>
+</html>

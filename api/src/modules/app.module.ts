@@ -9,6 +9,7 @@ import { AflamiModule } from './aflami/aflami.module'
 import { SecretsModule } from './secrets/secrets.module'
 import { HmlnyModule } from './hmlny/hmlny.module'
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module'
+import { Al3abiModule } from './al3abi/al3abi.module'
 import { User } from '../entities/user.entity'
 import { Otp } from '../entities/otp.entity'
 import { StorageUsage } from '../entities/storage.entity'
@@ -16,6 +17,7 @@ import { AflamiMovie } from '../entities/aflami-movie.entity'
 import { SecretCredential } from '../entities/secret-credential.entity'
 import { SecretsAccessOtp } from '../entities/secrets-access-otp.entity'
 import { ShoppingCartItem } from '../entities/shopping-cart-item.entity'
+import { Al3abiGame } from '../entities/al3abi-game.entity'
 
 @Module({
   imports: [
@@ -26,7 +28,7 @@ import { ShoppingCartItem } from '../entities/shopping-cart-item.entity'
       username: process.env.POSTGRES_USER || 'postgres',
       password: process.env.POSTGRES_PASSWORD || 'root',
       database: process.env.POSTGRES_DB || 'homeserver',
-      entities: [User, Otp, StorageUsage, AflamiMovie, SecretCredential, SecretsAccessOtp, ShoppingCartItem],
+      entities: [User, Otp, StorageUsage, AflamiMovie, SecretCredential, SecretsAccessOtp, ShoppingCartItem, Al3abiGame],
       synchronize: true,
     }),
   AuthModule,
@@ -36,6 +38,7 @@ import { ShoppingCartItem } from '../entities/shopping-cart-item.entity'
   SecretsModule,
   HmlnyModule,
   ShoppingCartModule,
+  Al3abiModule,
   ],
 })
 export class AppModule {}
