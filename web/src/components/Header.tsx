@@ -11,6 +11,8 @@ export default function Header() {
   const username = localStorage.getItem('username') || ''
   const isLoggedIn = !!localStorage.getItem('token')
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [profileOpen, setProfileOpen] = React.useState(false)
+  const profileRef = React.useRef<HTMLDivElement | null>(null)
 
   const navItems = [
     { to: '/home', label: t('myHome') },
@@ -30,6 +32,19 @@ export default function Header() {
     localStorage.removeItem('userId')
     window.location.href = '/signin'
   }
+
+  React.useEffect(() => {
+    function onDocClick(e: MouseEvent) {
+      if (!profileRef.current) return
+      if (!profileRef.current.contains(e.target as Node)) setProfileOpen(false)
+    }
+    document.addEventListener('mousedown', onDocClick)
+    return () => document.removeEventListener('mousedown', onDocClick)
+  }, [])
+
+  React.useEffect(() => {
+    setProfileOpen(false)
+  }, [location.pathname])
 
   return (
     <header className="sticky top-0 z-40 px-3 pt-2.5 sm:px-4 sm:pt-3">
@@ -88,14 +103,37 @@ export default function Header() {
             </button>
 
             {isLoggedIn ? (
-              <button
-                onClick={logout}
-                className="hidden sm:inline-flex items-center gap-2 h-9 px-3 rounded-lg bg-white/12 hover:bg-white/20 border border-white/25 transition text-sm"
-                aria-label={t('logout')}
-                title={t('logout')}
-              >
-                <span className="max-w-[140px] truncate">{username || t('logout')}</span>
-              </button>
+              <div className="hidden sm:block relative" ref={profileRef}>
+                <button
+                  type="button"
+                  onClick={() => setProfileOpen(v => !v)}
+                  className="inline-flex items-center gap-2 h-9 px-3 rounded-lg bg-white/12 hover:bg-white/20 border border-white/25 transition text-sm"
+                  aria-label={username || t('logout')}
+                  title={username || t('logout')}
+                >
+                  <span className="max-w-[140px] truncate">{username || t('logout')}</span>
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 opacity-80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                {profileOpen && (
+                  <div className="absolute right-0 mt-2 min-w-[170px] rounded-xl border border-white/20 bg-[#102446]/95 backdrop-blur-md shadow-xl p-1.5 z-50">
+                    <button
+                      type="button"
+                      onClick={logout}
+                      className="w-full inline-flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 text-sm"
+                    >
+                      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <path d="M16 17l5-5-5-5" />
+                        <path d="M21 12H9" />
+                      </svg>
+                      <span>{t('logout')}</span>
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : null}
 
             <button

@@ -39,8 +39,8 @@ export default function SignIn() {
   }
 
   return (
-    <div className="flex items-center justify-center py-12">
-      <AnimatedCard>
+    <div className="flex items-center justify-center py-12 w-full">
+      <AnimatedCard className="p-6 sm:p-7 w-full max-w-5xl">
         <form onSubmit={submit}>
           <h1 className="text-3xl font-bold mb-2">{t('welcomeBack')}</h1>
           <p className="text-sm text-white/75 mb-6">{t('signIn')}</p>

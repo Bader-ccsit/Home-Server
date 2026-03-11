@@ -49,8 +49,8 @@ export default function Reset() {
   }
 
   return (
-    <div className="flex items-center justify-center py-12">
-      <AnimatedCard>
+    <div className="flex items-center justify-center py-12 w-full">
+      <AnimatedCard className="p-6 sm:p-7 w-full max-w-5xl">
         <h1 className="text-2xl font-bold mb-4">{t('resetPassword')}</h1>
         {step === 1 && (
           <form onSubmit={requestReset}>

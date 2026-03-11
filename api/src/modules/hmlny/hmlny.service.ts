@@ -644,7 +644,18 @@ export class HmlnyService {
       })
       .sort((a: any, b: any) => Number(b?.height || 0) - Number(a?.height || 0))
 
-    const videoCandidate = videoCandidates[0]
+    const hasAudio = (f: any) => !!f?.acodec && String(f.acodec).toLowerCase() !== 'none'
+    const isMp4 = (f: any) => String(f?.ext || '').toLowerCase() === 'mp4'
+    const qualityScore = (f: any) => Number(f?.height || 0) * 100000 + Number(f?.tbr || 0)
+
+    // YouTube commonly exposes DASH video-only formats first; prefer muxed AV streams for preview/download.
+    const avCandidates = videoCandidates.filter(hasAudio)
+    const mp4AvCandidates = avCandidates.filter(isMp4)
+
+    const videoCandidate =
+      mp4AvCandidates.sort((a: any, b: any) => qualityScore(b) - qualityScore(a))[0]
+      || avCandidates.sort((a: any, b: any) => qualityScore(b) - qualityScore(a))[0]
+      || videoCandidates[0]
 
     if (imageCandidate?.url && !videoCandidate?.url) {
       const ext = String(imageCandidate?.ext || this.extFromUrl(String(imageCandidate.url))).toLowerCase()
