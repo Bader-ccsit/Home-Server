@@ -8,12 +8,14 @@ import { BaderTubeModule } from './badertube/badertube.module'
 import { AflamiModule } from './aflami/aflami.module'
 import { SecretsModule } from './secrets/secrets.module'
 import { HmlnyModule } from './hmlny/hmlny.module'
+import { ShoppingCartModule } from './shopping-cart/shopping-cart.module'
 import { User } from '../entities/user.entity'
 import { Otp } from '../entities/otp.entity'
 import { StorageUsage } from '../entities/storage.entity'
 import { AflamiMovie } from '../entities/aflami-movie.entity'
 import { SecretCredential } from '../entities/secret-credential.entity'
 import { SecretsAccessOtp } from '../entities/secrets-access-otp.entity'
+import { ShoppingCartItem } from '../entities/shopping-cart-item.entity'
 
 @Module({
   imports: [
@@ -24,7 +26,7 @@ import { SecretsAccessOtp } from '../entities/secrets-access-otp.entity'
       username: process.env.POSTGRES_USER || 'postgres',
       password: process.env.POSTGRES_PASSWORD || 'root',
       database: process.env.POSTGRES_DB || 'homeserver',
-      entities: [User, Otp, StorageUsage, AflamiMovie, SecretCredential, SecretsAccessOtp],
+      entities: [User, Otp, StorageUsage, AflamiMovie, SecretCredential, SecretsAccessOtp, ShoppingCartItem],
       synchronize: true,
     }),
   AuthModule,
@@ -33,6 +35,7 @@ import { SecretsAccessOtp } from '../entities/secrets-access-otp.entity'
   AflamiModule,
   SecretsModule,
   HmlnyModule,
+  ShoppingCartModule,
   ],
 })
 export class AppModule {}

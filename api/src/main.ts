@@ -8,10 +8,20 @@ import { AppModule } from './modules/app.module'
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
   app.setGlobalPrefix('')
-  // enable CORS - allow origin from env or default to the frontend dev origin
-  const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:5173'
+  // enable CORS - allow one or many origins via comma-separated CORS_ORIGIN
+  const rawOrigins = process.env.CORS_ORIGIN || 'http://localhost:5173'
+  const allowedOrigins = rawOrigins
+    .split(',')
+    .map(v => v.trim())
+    .filter(Boolean)
+
   app.enableCors({
-    origin: corsOrigin,
+    origin: (origin, callback) => {
+      // Allow server-to-server or non-browser requests without origin header.
+      if (!origin) return callback(null, true)
+      if (allowedOrigins.includes(origin)) return callback(null, true)
+      return callback(new Error('CORS origin not allowed'), false)
+    },
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     credentials: true,
     // include custom headers used by the frontend (x-user-id for dev-mode user identification)
