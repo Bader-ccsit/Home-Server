@@ -24,6 +24,7 @@ import PasteMe from './pages/PasteMe'
 import SecretsVerify from './pages/SecretsVerify'
 import Secrets from './pages/Secrets'
 import Reset from './pages/Reset'
+import Admin from './pages/Admin'
 import './styles.css'
 import { I18nProvider } from './contexts/I18nContext'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -52,6 +53,7 @@ function App() {
               <Route path="/signup" element={<PublicOnly><SignUp /></PublicOnly>} />
               <Route path="/activate" element={<Activate />} />
               <Route path="/reset" element={<Reset />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="/home" element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="/drive" element={<RequireAuth><Drive /></RequireAuth>} />
               <Route path="/badertube" element={<RequireAuth><BaderTube /></RequireAuth>} />

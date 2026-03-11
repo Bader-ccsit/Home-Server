@@ -11,6 +11,7 @@ import { HmlnyModule } from './hmlny/hmlny.module'
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module'
 import { Al3abiModule } from './al3abi/al3abi.module'
 import { PasteMeModule } from './pasteme/pasteme.module'
+import { AdminModule } from './admin/admin.module'
 import { User } from '../entities/user.entity'
 import { Otp } from '../entities/otp.entity'
 import { StorageUsage } from '../entities/storage.entity'
@@ -42,6 +43,7 @@ import { PasteMeEntry } from '../entities/pasteme-entry.entity'
   ShoppingCartModule,
   Al3abiModule,
   PasteMeModule,
+  AdminModule,
   ],
 })
 export class AppModule {}
