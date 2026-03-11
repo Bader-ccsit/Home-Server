@@ -151,22 +151,22 @@ export default function Al3abiFamily() {
 
       <AnimatedCard className="p-5 mb-5">
         <div className="text-lg font-semibold mb-3">{lang === 'ar' ? 'ألعاب عائلية مميزة' : 'Featured Family Games'}</div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {featured.map(game => (
             <button
               key={game.id}
               type="button"
               onClick={() => (window.location.href = `/al3abi/family/local/${encodeURIComponent(game.slug)}`)}
-              className="text-left rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-3 hover:border-white/30 block transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/20"
+              className="text-left rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-2.5 hover:border-white/30 block transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/20"
             >
-              <div className="w-full aspect-[2/3] rounded-lg overflow-hidden bg-gradient-to-br from-indigo-500/30 via-emerald-500/20 to-sky-500/25 mb-3 border border-white/10 flex items-center justify-center">
-                <span className="text-4xl font-black tracking-wide opacity-90">{game.badge}</span>
+              <div className="w-full aspect-[16/10] rounded-lg overflow-hidden bg-gradient-to-br from-indigo-500/30 via-emerald-500/20 to-sky-500/25 mb-2 border border-white/10 flex items-center justify-center">
+                <span className="text-2xl font-black tracking-wide opacity-90">{game.badge}</span>
               </div>
-              <div className="font-semibold mb-1 line-clamp-2">{lang === 'ar' ? game.titleAr : game.titleEn}</div>
-              <div className="text-sm opacity-80 line-clamp-3 mb-2">{lang === 'ar' ? game.descriptionAr : game.descriptionEn}</div>
+              <div className="font-semibold text-sm mb-1 line-clamp-2">{lang === 'ar' ? game.titleAr : game.titleEn}</div>
+              <div className="text-xs opacity-80 line-clamp-2 mb-2">{lang === 'ar' ? game.descriptionAr : game.descriptionEn}</div>
               <div className="flex flex-wrap gap-2">
                 {(lang === 'ar' ? game.categoriesAr : game.categoriesEn).map(c => (
-                  <span key={`${game.id}-${c}`} className="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/15">{c}</span>
+                  <span key={`${game.id}-${c}`} className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 border border-white/15">{c}</span>
                 ))}
               </div>
             </button>

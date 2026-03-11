@@ -3,7 +3,12 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const ThemeContext = createContext<any>(null)
 
 export function ThemeProvider({ children }: any) {
-  const [theme, setTheme] = useState<string>(() => localStorage.getItem('theme') || 'dark')
+  const [theme, setTheme] = useState<string>(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark' || saved === 'light') return saved
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    return prefersDark ? 'dark' : 'light'
+  })
 
   useEffect(() => {
     localStorage.setItem('theme', theme)

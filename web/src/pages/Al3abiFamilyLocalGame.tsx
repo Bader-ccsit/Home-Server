@@ -894,7 +894,11 @@ export default function Al3abiFamilyLocalGame() {
         <AnimatedCard className="p-6">
           <h1 className="text-2xl font-bold mb-1">{lang === 'ar' ? config.titleAr : config.titleEn}</h1>
           <p className="text-sm opacity-75 mb-4">{lang === 'ar' ? config.subtitleAr : config.subtitleEn}</p>
-          {config.component(lang)}
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-5xl">
+              {config.component(lang)}
+            </div>
+          </div>
         </AnimatedCard>
       )}
     </div>

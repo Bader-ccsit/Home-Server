@@ -13,6 +13,8 @@ export default function SecretsVerify() {
   const [otp, setOtp] = useState('')
   const [loading, setLoading] = useState(false)
   const [sending, setSending] = useState(false)
+  const [hasSentOtp, setHasSentOtp] = useState(false)
+  const [cooldownSeconds, setCooldownSeconds] = useState(0)
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
 
@@ -22,11 +24,14 @@ export default function SecretsVerify() {
   }
 
   async function requestOtp() {
+    if (sending || cooldownSeconds > 0) return
     setSending(true)
     setError('')
     setMessage('')
     try {
       await axios.post(`${apiBase}/secrets/request-access-otp`, {}, { headers: authHeaders() })
+      setHasSentOtp(true)
+      setCooldownSeconds(120)
       setMessage(t('secretsOtpSent'))
     } catch (err: any) {
       setError(err?.response?.data?.message || t('secretsOtpSendFailed'))
@@ -60,8 +65,20 @@ export default function SecretsVerify() {
   }
 
   useEffect(() => {
-    requestOtp()
-  }, [])
+    if (cooldownSeconds <= 0) return
+    const timer = window.setInterval(() => {
+      setCooldownSeconds(prev => {
+        if (prev <= 1) {
+          window.clearInterval(timer)
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+    return () => window.clearInterval(timer)
+  }, [cooldownSeconds])
+
+  const cooldownLabel = `${String(Math.floor(cooldownSeconds / 60)).padStart(2, '0')}:${String(cooldownSeconds % 60).padStart(2, '0')}`
 
   return (
     <div className="p-6 max-w-xl mx-auto w-full">
@@ -84,8 +101,12 @@ export default function SecretsVerify() {
             <AnimatedButton type="submit" disabled={loading || !otp.trim()}>
               {loading ? t('secretsVerifying') : t('secretsEnterVault')}
             </AnimatedButton>
-            <AnimatedButton type="button" onClick={requestOtp} disabled={sending} className="bg-white/10">
-              {sending ? t('secretsSendingOtp') : t('resendOtp')}
+            <AnimatedButton type="button" onClick={requestOtp} disabled={sending || cooldownSeconds > 0} className="bg-white/10">
+              {sending
+                ? t('secretsSendingOtp')
+                : hasSentOtp
+                  ? `${t('resendOtp')}${cooldownSeconds > 0 ? ` (${cooldownLabel})` : ''}`
+                  : t('sendOtp')}
             </AnimatedButton>
           </div>
         </form>

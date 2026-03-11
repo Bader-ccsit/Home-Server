@@ -125,8 +125,8 @@ export default function Al3abiRetro() {
                   onClick={() => (window.location.href = `/al3abi/game/${encodeURIComponent(game.id)}`)}
                   className="text-left rounded-xl border border-white/10 bg-white/5 p-3 hover:border-white/30"
                 >
-                  <div className="w-full aspect-[2/3] rounded-lg overflow-hidden bg-black mb-3">
-                    {game.coverUrl ? <img src={`${apiBase}${game.coverUrl}`} alt={game.title} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-xs opacity-70">{t('al3abiNoCover')}</div>}
+                  <div className="w-full aspect-[2/3] rounded-lg overflow-hidden bg-black/60 mb-3 flex items-center justify-center">
+                    {game.coverUrl ? <img src={`${apiBase}${game.coverUrl}`} alt={game.title} className="w-full h-full object-contain" /> : <div className="w-full h-full flex items-center justify-center text-xs opacity-70">{t('al3abiNoCover')}</div>}
                   </div>
                   <div className="font-semibold mb-1 line-clamp-2">{game.title}</div>
                   <div className="text-xs opacity-70 mb-2">{lang === 'ar' ? game.consoleNameAr : game.consoleNameEn}</div>

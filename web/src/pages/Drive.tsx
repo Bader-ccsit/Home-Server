@@ -294,29 +294,43 @@ export default function Drive() {
   }
 
   return (
-    <div>
-      <div className="flex flex-wrap items-end gap-3 mb-6">
-        <FancyInput
-          label={t('driveRelativePath')}
-          value={pathInput}
-          onChange={(e:any)=>setPathInput(e.target.value)}
-          onKeyDown={(e:any) => {
-            if (e.key === 'Enter') goToTypedPath()
-          }}
-          placeholder={t('drivePathPlaceholder')}
-        />
-        <AnimatedButton onClick={goToTypedPath}>{t('driveGo')}</AnimatedButton>
-        <FancyInput label={t('driveSearch')} value={query} onChange={(e:any)=>setQuery(e.target.value)} />
-        <AnimatedButton onClick={doSearch}>{t('driveSearch')}</AnimatedButton>
-        <AnimatedButton onClick={makeFolder}>{t('driveNewFolder')}</AnimatedButton>
-      </div>
+    <div className="space-y-4">
+      <AnimatedCard className="p-4 sm:p-5">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_auto] gap-3 items-end">
+          <FancyInput
+            label={t('driveRelativePath')}
+            value={pathInput}
+            onChange={(e:any)=>setPathInput(e.target.value)}
+            onKeyDown={(e:any) => {
+              if (e.key === 'Enter') goToTypedPath()
+            }}
+            placeholder={t('drivePathPlaceholder')}
+          />
 
-      <div className="mb-4 text-xs text-slate-300">
-        <div>{t('driveCurrentRelativePath')} <span className="font-semibold">/{path || t('driveRoot')}</span></div>
-        <div>{t('driveExactUrl')} <span className="font-semibold break-all">{exactPathUrl}</span></div>
-      </div>
+          <FancyInput
+            label={t('driveSearch')}
+            value={query}
+            onChange={(e:any)=>setQuery(e.target.value)}
+            onKeyDown={(e:any) => {
+              if (e.key === 'Enter') doSearch()
+            }}
+          />
 
-      <AnimatedCard>
+          <div className="flex flex-wrap gap-2 lg:justify-end">
+            <AnimatedButton onClick={goToTypedPath} className="px-4 py-2 text-sm">{t('driveGo')}</AnimatedButton>
+            <AnimatedButton onClick={doSearch} className="px-4 py-2 text-sm">{t('driveSearch')}</AnimatedButton>
+            <AnimatedButton onClick={makeFolder} className="px-4 py-2 text-sm">{t('driveNewFolder')}</AnimatedButton>
+          </div>
+        </div>
+
+        <div className="mt-3 text-xs opacity-80">
+          <div>{t('driveCurrentRelativePath')} <span className="font-semibold">/{path || t('driveRoot')}</span></div>
+          <div>{t('driveExactUrl')} <span className="font-semibold break-all">{exactPathUrl}</span></div>
+        </div>
+      </AnimatedCard>
+
+      <AnimatedCard className="p-0 overflow-hidden">
+        <div className="p-4 sm:p-5">
         {path && (
           <div
             onDragOver={(e) => { e.preventDefault(); setDropTargetPath('__PARENT__') }}
@@ -328,20 +342,21 @@ export default function Drive() {
           </div>
         )}
 
-        <div onDrop={handleDrop} onDragOver={e=>e.preventDefault()} className="p-6 border-2 border-dashed rounded-md text-center mb-4">
+        <div onDrop={handleDrop} onDragOver={e=>e.preventDefault()} className="p-6 border-2 border-dashed rounded-xl text-center mb-4">
             <div className="mb-2">{t('driveDropZoneText')} /{path || t('driveRoot')}</div>
             <AnimatedButton onClick={handleBrowse}>{t('driveBrowseFiles')}</AnimatedButton>
           <input ref={fileRef} type="file" hidden onChange={e=>onFiles(e.target.files)} />
         </div>
+        </div>
 
-        <div>
+        <div className="overflow-x-auto border-t border-white/10">
             {loading ? <div>{t('driveLoading')}</div> : (
-            <table className="w-full text-left">
-              <thead>
-                <tr className="text-sm text-slate-200">
-                    <th>{t('driveName')}</th>
-                    <th>{t('driveSize')}</th>
-                    <th>{t('driveModified')}</th>
+            <table className="w-full text-left min-w-[780px]">
+              <thead className="bg-white/5">
+                <tr className="text-sm opacity-90">
+                    <th className="px-4 py-3">{t('driveName')}</th>
+                    <th className="px-4 py-3">{t('driveSize')}</th>
+                    <th className="px-4 py-3">{t('driveModified')}</th>
                   <th></th>
                 </tr>
               </thead>
@@ -355,9 +370,9 @@ export default function Drive() {
                     onDragOver={it.isDir ? (e) => handleFolderDragOver(e, it.path) : undefined}
                     onDragLeave={it.isDir ? () => setDropTargetPath(null) : undefined}
                     onDrop={it.isDir ? (e) => handleFolderDrop(e, it.path) : undefined}
-                    className={`border-t border-white/5 ${it.isDir && dropTargetPath === it.path ? 'bg-emerald-500/10' : ''}`}
+                    className={`border-t border-white/8 ${it.isDir && dropTargetPath === it.path ? 'bg-emerald-500/10' : ''}`}
                   >
-                    <td>
+                    <td className="px-4 py-3">
                       {it.isDir ? '📁' : '📄'}{' '}
                       {it.isDir ? (
                         <button onClick={() => navigateTo(it.path)} className="underline">
@@ -365,9 +380,9 @@ export default function Drive() {
                         </button>
                       ) : it.name}
                     </td>
-                    <td>{it.isDir ? '-' : humanSize(it.size || 0)}</td>
-                    <td>{it.mtime ? new Date(it.mtime).toLocaleString(lang === 'ar' ? 'ar' : 'en') : '-'}</td>
-                    <td className="text-right">
+                    <td className="px-4 py-3">{it.isDir ? '-' : humanSize(it.size || 0)}</td>
+                    <td className="px-4 py-3">{it.mtime ? new Date(it.mtime).toLocaleString(lang === 'ar' ? 'ar' : 'en') : '-'}</td>
+                    <td className="px-4 py-3 text-right whitespace-nowrap">
                       {!it.isDir && <button onClick={()=>downloadFile(it.path)} className="mr-3 underline cursor-pointer">{t('driveDownload')}</button>}
                       {!it.isDir && <button onClick={()=>previewFile(it.path)} className="mr-3 underline cursor-pointer">{t('drivePreview')}</button>}
                       <button onClick={()=>rename(it.path)} className="mr-2 text-sm">{t('driveRename')}</button>

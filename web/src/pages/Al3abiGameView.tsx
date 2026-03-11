@@ -81,7 +81,7 @@ export default function Al3abiGameView() {
   return (
     <div className="p-6">
       <div className="mb-4 flex flex-wrap gap-2">
-        <button type="button" onClick={() => (window.location.href = '/al3abi')} className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20">{t('al3abiBackHome')}</button>
+        <button type="button" onClick={() => (window.location.href = '/al3abi/retro')} className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20">{t('al3abiBackRetro')}</button>
         <button type="button" onClick={() => (window.location.href = '/al3abi/manage')} className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20">{t('al3abiOpenManage')}</button>
       </div>
 
@@ -94,7 +94,9 @@ export default function Al3abiGameView() {
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
             <h1 className="text-2xl font-bold">{game.title}</h1>
             {game.coverUrl ? (
-              <img src={`${apiBase}${game.coverUrl}`} alt={game.title} className="w-32 h-44 object-cover rounded-xl border border-white/10" />
+              <div className="w-32 h-44 rounded-xl border border-white/10 bg-black/60 flex items-center justify-center overflow-hidden">
+                <img src={`${apiBase}${game.coverUrl}`} alt={game.title} className="w-full h-full object-contain" />
+              </div>
             ) : null}
           </div>
 

@@ -4,12 +4,16 @@ import AnimatedBackground from './AnimatedBackground'
 
 export default function Layout({ children }: any) {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-sky-900 to-indigo-900 dark:from-slate-900 dark:to-slate-800 text-white">
+    <div className="app-shell min-h-screen relative overflow-hidden">
       <AnimatedBackground />
-      <Header />
-      <main className="p-6">
-        {children}
-      </main>
+      <div className="relative z-10 min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 px-3 pb-4 sm:px-4 sm:pb-6 lg:px-6 lg:pb-8">
+          <div className="w-full max-w-[1180px] mx-auto">
+            {children}
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

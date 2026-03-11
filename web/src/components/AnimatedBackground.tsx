@@ -3,30 +3,16 @@ import React from 'react'
 export default function AnimatedBackground() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <svg className="absolute left-1/4 top-0 w-[640px] h-[640px] bg-clip-padding bg-cover bg-no-repeat bg-center opacity-60 transform-gpu animate-blobRotate"
-           viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(300,300)">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.7" />
-              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-          <circle r="260" fill="url(#g1)" />
-        </g>
-      </svg>
-
-      <svg className="absolute right-0 bottom-0 w-[520px] h-[520px] opacity-40 transform-gpu animate-float"
-           viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute -left-36 -top-32 w-[560px] h-[560px] rounded-full bg-cyan-400/25 dark:bg-cyan-400/18 blur-[90px] animate-float" />
+      <div className="absolute right-[-180px] top-[18%] w-[620px] h-[620px] rounded-full bg-violet-500/20 dark:bg-violet-500/25 blur-[110px] animate-blobRotate" />
+      <div className="absolute left-[22%] bottom-[-220px] w-[680px] h-[680px] rounded-full bg-blue-500/20 dark:bg-blue-500/22 blur-[120px] animate-float" />
+      <svg className="absolute inset-0 w-full h-full opacity-[0.16] dark:opacity-[0.09]" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="g2" x1="0" x2="1">
-            <stop offset="0%" stopColor="#ff6b6b" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.45" />
-          </linearGradient>
+          <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.3" fill="currentColor" />
+          </pattern>
         </defs>
-        <g transform="translate(300,300)">
-          <ellipse rx="220" ry="220" fill="url(#g2)" />
-        </g>
+        <rect width="1200" height="800" fill="url(#dots)" />
       </svg>
     </div>
   )
